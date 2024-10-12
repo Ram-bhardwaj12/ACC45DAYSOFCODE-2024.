@@ -1,0 +1,19 @@
+#include <stdio.h>
+int ceiling(int a, int b) {
+    return (a + b - 1) / b;
+}
+
+int main() {
+    int T;  
+    scanf("%d", &T);
+
+    while (T--) {
+        int N, K, M;
+        scanf("%d %d %d", &N, &K, &M);
+        int capacity_per_bag = K * M; 
+        int bags_needed = ceiling(N, capacity_per_bag);
+        printf("%d\n", bags_needed);
+    }
+
+    return 0;
+}
